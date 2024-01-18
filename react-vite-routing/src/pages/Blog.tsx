@@ -1,19 +1,23 @@
 import { useEffect, useState } from 'react'
 
 function Blog() {
-  interface Post {
-    userId: number,
+
+
+  interface User {
     id: number,
-    title: string
-    completed: boolean
+    firstName: string,
+    lastName: string,
+    age: number
   }
 
-  const [posts, setPosts] = useState([] as Post[])
+  const [posts, setPosts] = useState([] as User[])
+
+
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://dummyjson.com/users')
       .then(response => response.json())
-      .then(data => setPosts(data))
+      .then(data => setPosts(data.users))
   }, [])
 
   return (
@@ -23,8 +27,8 @@ function Blog() {
       <div className="grid grid-cols-3 gap-4">
         {posts.map(post => (
           <div key={post.id} className="bg-white p-4 shadow-md rounded-md">
-            <h2 className="text-xl font-bold">{post.title}</h2>
-            {post.completed ? <p>Completed</p> : <p>Not completed</p>}
+            <h2 className="text-xl font-bold">{post.firstName}</h2>
+            <p className="text-gray-600">{post.age}</p>
           </div>
         ))}
       </div>
