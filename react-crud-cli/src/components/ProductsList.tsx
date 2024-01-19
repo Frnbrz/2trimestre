@@ -130,7 +130,7 @@ const ProductsList = () => {
               <label>
                 <strong>Fecha Caducidad:</strong>
               </label>{" "}
-              {currentTutorial.fechaCaducidad ? "Published" : "Pending"}
+              {currentTutorial.fechaCaducidad}
             </div>
 
             <Link
