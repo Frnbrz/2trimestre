@@ -1,8 +1,7 @@
-import React from 'react';
-import BoardSectionList from './components/BoardSectionList';
+import BoardSectionList from './components/BoardSectionList'
 
 function App() {
-  return <BoardSectionList />;
+  return <BoardSectionList />
 }
 
-export default App;
+export default App
