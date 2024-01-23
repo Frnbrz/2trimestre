@@ -1,7 +1,0 @@
-{
-  "name": "actividad-di",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
