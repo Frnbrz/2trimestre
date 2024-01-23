@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Instagram </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="feed">
+  <div class="grid-container">
+    <ion-card class="card">
+      <ion-card-header class="card-header">
+        <div class="avatar-title">
+          <img
+            src="http://via.placeholder.com/50x50"
+            alt="Avatar"
+            class="avatar"
+          />
+          <ion-card-title>Card Title</ion-card-title>
+        </div>
+      </ion-card-header>
+
+      <img
+        src="http://via.placeholder.com/412x515"
+        alt="Image"
+        class="card-image"
+      />
+      <div class="likes">
+        <ion-icon name="heart" class="heart-icon"></ion-icon>
+
+        <ion-icon name="chatbubble" class="comment-icon"></ion-icon>
+
+        <ion-icon name="share" class="comment-icon"></ion-icon>
+      </div>
+
+      <span class="like-count">674.273 Me gusta</span>
+      <span>Card Subtitle</span>
+    </ion-card>
+  </div>
+</ion-content>
+
+<style>
+  #container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+  }
+
+  #container a {
+    text-decoration: none;
+  }
+
+  .grid-container {
+    display: grid;
+    place-items: center;
+  }
+
+  .feed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .avatar-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .likes-comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .likes,
+  .comments {
+    display: flex;
+    align-items: center;
+  }
+
+  .like-count,
+  .comment-count {
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+</style>

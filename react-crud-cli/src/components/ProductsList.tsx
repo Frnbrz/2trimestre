@@ -53,7 +53,7 @@ const ProductsList = () => {
   }
 
   const findByTitle = () => {
-    TutorialDataService.findByTitle(searchTitle)
+    TutorialDataService.findByTitle(searchId)
       .then(response => {
         setTutorials(response.data)
         console.log(response.data)

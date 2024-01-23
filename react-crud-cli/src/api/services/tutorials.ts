@@ -25,8 +25,8 @@ const removeAll = () => {
   return http.delete(`/products`)
 }
 
-const findByTitle = (title: string) => {
-  return http.get(`/products?title=${title}`)
+const findById = (id: number) => {
+  return http.get(`/products/${id}`)
 }
 
 const TutorialService = {
@@ -36,7 +36,7 @@ const TutorialService = {
   update,
   remove,
   removeAll,
-  findByTitle,
+  findByTitle: findById,
 }
 
 export default TutorialService
